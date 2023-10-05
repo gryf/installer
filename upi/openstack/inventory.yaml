@@ -70,3 +70,7 @@ all:
       # Be aware that the 10 and 11 of the machineNetwork will
       # be taken by neutron dhcp by default, and wont be available.
       os_ingressVIP: "{{ os_subnet_range | ansible.utils.next_nth_usable(7) }}"
+
+      # Dual stack installation. When set to True, additional security group
+      # rules will be created.
+      os_dualstack: False
